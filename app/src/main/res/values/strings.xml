@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Android AirDrop</string>
+    <string name="scanning_for_devices">Scanning for nearby Macs…</string>
+    <string name="no_devices_found">No Mac devices found yet</string>
+    <string name="airdrop_requirement_hint">Make sure your Mac is on the same Wi-Fi and AirDrop is set to \"Everyone\"</string>
+    <string name="select_files">Select Files</string>
+    <string name="transferring">Transferring files…</string>
+    <string name="transfer_complete">Transfer complete!</string>
+    <string name="transfer_failed">Transfer failed</string>
+    <string name="declined_by_receiver">The transfer was declined on Mac.</string>
+</resources>
