@@ -1,8 +1,18 @@
 # Android AirDrop (net.j4dy.AndroidAirDrop)
 
-An open-source Android app enabling seamless one-way file transfer from Android to macOS using Apple's AirDrop protocol over local Wi-Fi.
+> [!WARNING]
+> ### 🛑 Project Discontinued / Inactive
+> **This project is no longer actively developed or continued.**
+> Starting around **November 2025**, Android's built-in system **Quick Share** introduced native compatibility with Apple devices ("Share with Apple devices" via the AirDrop protocol). 
+> Because this functionality is now natively integrated into modern Android system Quick Share without requiring custom third-party APKs or workarounds, maintaining this standalone continuation is no longer necessary.
+>
+> For reference or custom ROM implementations, the reverse-engineered AirDrop protocol and mDNS codebase remain available in this repository under the Apache 2.0 License.
 
-This project is a modern continuation of [WarpShare](https://github.com/moseoridev/WarpShare) (originally created by the MoKee Open Source Project and later maintained by moseoridev), redesigned for modern Android versions (Android 14+) with improved discovery reliability, modern Jetpack Compose UI, and direct system share sheet integration.
+---
+
+An open-source Android app enabling one-way file transfer from Android to macOS using Apple's AirDrop protocol over local Wi-Fi.
+
+This project was originally initiated as a modern continuation of [WarpShare](https://github.com/moseoridev/WarpShare) (created by the MoKee Open Source Project and moseoridev), rebuilt for modern Android (Android 14+) with Jetpack Compose Material 3 and system share sheet integration.
 
 ---
 
@@ -23,19 +33,6 @@ AirDrop on macOS operates over both AWDL (Apple Wireless Direct Link) and local 
 - **Mac AirDrop Visibility:** AirDrop on macOS must be set to **"Everyone"** (due to Apple ID cryptographic certificates required for "Contacts Only"). Note that macOS automatically reverts "Everyone" after 10 minutes.
 - **Direction:** Android $\rightarrow$ Mac only.
 - **File Size Limit:** ~4.2 GB per single file transfer due to standard CPIO 32-bit header constraints (sufficient for standard everyday sharing).
-
----
-
-## 🗺️ Roadmap & Milestones
-
-Check the [GitHub Issues](https://github.com/j4dy/net.j4dy.AndroidAirDrop/issues) for the detailed feature tracking and progress:
-
-1. **Phase 1: Foundation & Project Genesis** - Modern Gradle setup, Android 14+ target, Kotlin 2.x, core package structure.
-2. **Phase 2: Discovery Engine Modernization** - Robust mDNS resolver combining Android `NsdManager` and fallback `JmDNS` to prevent OEM multicast drop issues.
-3. **Phase 3: AirDrop Protocol State Machine** - Porting and modernizing TLS socket factories, plist serialization, and `/Discover`, `/Ask`, `/Upload` HTTP flow.
-4. **Phase 4: Modern Compose UI & Android Share Sheet Integration** - Jetpack Compose radar scanner, transfer progress notifications, and system `ACTION_SEND` intent handling.
-5. **Phase 5: Diagnostics & Troubleshooting Tooling** - In-app Wi-Fi diagnostics, subnet/AP isolation detection, connection status guides.
-6. **Phase 6: CPIO / Archive Format Enhancements (Lowest Priority)** - Retaining standard CPIO packaging (< 4.2 GB) and deferring larger chunking formats.
 
 ---
 
